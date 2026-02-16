@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-gradient">
+    <header>
+      <h1 class="main-title">🎯 Smart Event Dashboard</h1>
+      <p class="subtitle">Plan smart. Stay organized.</p>
+    </header>
+
+    <main id="mainContainer">
+      <section id="formContainer" class="card">
+        <h2>Add New Event</h2>
+
+        <form id="eventForm" autocomplete="off">
+          <label for="eventName">Event Title:</label>
+          <input type="text" id="eventName" placeholder="e.g. Tech Workshop" required />
+
+          <label for="eventDate">Event Date:</label>
+          <input type="date" id="eventDate" required />
+
+          <label for="eventCategory">Category:</label>
+          <select id="eventCategory">
+            <option>Conference</option>
+            <option>Workshop</option>
+            <option>Social</option>
+          </select>
+
+          <label for="eventDescription">Description:</label>
+          <textarea id="eventDescription" placeholder="Short description..." required></textarea>
+
+          <button type="submit" id="add-btn">➕ Add Event</button>
+        </form>
+      </section>
+
+      <section id="listSection" class="card">
+        <h2>My Events</h2>
+
+        <div class="button-row">
+          <button type="button" id="clear-btn" class="secondary-btn">
+            🗑️ Clear All Events
+          </button>
+          <button type="button" id="sample-btn" class="secondary-btn">
+            ⚡ Add Sample Events
+          </button>
+        </div>
+
+        <div id="eventContainer">
+          <p class="empty-msg">No events yet. Add your first event!</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="card demo-section">
+      <h2>DOM Manipulation Demo</h2>
+      <div class="demo-box">
+        <p><strong>innerText vs innerHTML vs textContent</strong></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ☕ + JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
